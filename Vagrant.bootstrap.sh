@@ -3,7 +3,7 @@
 ### Software provisioning ###
 
 # Updates
-sudo apt-get update
+sudo apt-get updates
 
 # Web server
 sudo apt-get install -y apache2 
@@ -32,8 +32,8 @@ APP_PATH="$APACHE_ROOT/utn-devops-app";
 # VirtualHost configuration
 if [ -f "/tmp/devops.site.conf" ]; then
 	echo "Copy Apache VirtualHost configuration file";
-	sudo mv /tmp/site-devops.conf /etc/apache2/sites-available
-	sudo a2ensite site-devops.conf
+	sudo mv /tmp/devops.site.conf /etc/apache2/sites-available
+	sudo a2ensite devops.site.conf
 	sudo a2dissite 000-default.conf
 	sudo service apache2 reload
 fi
