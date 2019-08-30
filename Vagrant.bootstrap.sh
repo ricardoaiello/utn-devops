@@ -30,7 +30,7 @@ APACHE_ROOT="/var/www";
 APP_PATH="$APACHE_ROOT/utn-devops-app";
 
 # VirtualHost configuration
-if [ -f "/tmp/devops.site.conf" ]; then
+if [ -f "/tmp/site-devops.conf" ]; then
 	echo "Copy Apache VirtualHost configuration file";
 	sudo mv /tmp/site-devops.conf /etc/apache2/sites-available
 	sudo a2ensite site-devops.conf
