@@ -26,11 +26,11 @@ echo vm.swappiness = 10 | sudo tee -a /etc/sysctl.conf
 
 # Root paths
 APACHE_ROOT="/var/www";
-APP_PATH="$APACHE_ROOT/utn-devops-app";
+APP_PATH="$APACHE_ROOT/utn-devops-app-grupo1";
 
 # Application
 cd $APACHE_ROOT;
-sudo git clone https://github.com/ricardoaiello/utn-devops-app-grupo1.git utn-devops-app;
+sudo git clone https://github.com/ricardoaiello/utn-devops-app-grupo1.git
 cd $APP_PATH;
 sudo git checkout unidad-2;
 
