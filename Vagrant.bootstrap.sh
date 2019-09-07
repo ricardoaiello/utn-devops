@@ -30,7 +30,7 @@ APP_PATH="$APACHE_ROOT/utn-devops-app";
 
 # Application
 cd $APACHE_ROOT;
-sudo git clone https://github.com/ricardoaiello/utn-devops-app-grupo1.git;
+sudo git clone https://github.com/ricardoaiello/utn-devops-app-grupo1.git utn-devops-app;
 cd $APP_PATH;
 sudo git checkout unidad-2;
 
