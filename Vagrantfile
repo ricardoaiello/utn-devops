@@ -1,10 +1,10 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
-  config.vm.hostname = "ricardoaiello.utn-devops.localhost"
+  config.vm.hostname = "grupo1.utn-devops.localhost"
 
   config.vm.provider "virtualbox" do |vb|
-	vb.name = "utn-devops-ricardoaiello"
+	vb.name = "utn-devops-grupo1"
   end
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
