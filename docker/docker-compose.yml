@@ -4,11 +4,7 @@ services:
     container_name: apache2_php
     build: .
     volumes:
-      - "./configs/php/php.ini:/usr/local/etc/php/php.ini"
-      - "./configs/httpd/site-devops.conf:/etc/apache2/sites-available/000-default.conf"
-      - "./configs/app/.env:/var/www/html/app-grupo1/.env"
-      - "./configs/app/config_app.sh:/tmp/config_app.sh"
-      - "/var/www/utn-devops-app-grupo1:/var/www/html"
+      - "/var/www/utn-devops-app:/var/www/html"
     ports:
       - "8081:80" 
     depends_on:
@@ -17,11 +13,10 @@ services:
     image: mysql:5.7
     container_name: mysql
     environment:
-      - MYSQL_DATABASE=devops_app_grupo1
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=devops_app #creará una base de datos con ese nombre
+      - MYSQL_ROOT_PASSWORD=root #clave de administrador del servidor MySQL
     ports:
       - "4400:3306"
     volumes:
       - /var/db/mysql:/var/lib/mysql
       - "./configs/mysql/script.sql:/tmp/script.sql"
-
